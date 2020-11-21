@@ -1,0 +1,12 @@
+
+.navFatherFontSize{
+	font-size: 30px;
+	font-weight: bold;
+}
+.navFontSize{
+	font-size: 20px;
+}
+.box{
+	box-shadow: 0px 0px 10px 0px rgb(206, 221, 206);
+	border-radius: 20px;
+}
