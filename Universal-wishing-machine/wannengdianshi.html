@@ -65,7 +65,7 @@
 							<div id="collapseOne" class="collapse" data-parent="#accordionExample">
 								<div class="card-body">
 									<p class="h5">①别问,问得越多,消失越快,选择接口,单击Watching,看电视.</p>
-									<p class="h5">②接口仓库会自动选择,除非非常特殊情况,否则不用手选,不然可能会出现解析不出来的情况</p>
+									<p class="h5">②接口类型会自动选择,除非非常特殊情况,否则不用手选,不然可能会出现解析不出来的情况</p>
 									<p class="h5">③我自己写的后台接口会注明参数带YQYStudio,别人的接口有可能是由广告的<p class="text-monospace text-danger h3 font-weight-bold">接口中出现的广告,切记,千万不能相信,不要点,不要带有好奇心.不然造成的一切损失由个人承担!!!</p></p>
 								</div>
 							</div>
@@ -81,16 +81,26 @@
 							</div>
 							<div id="collapseTwo" class="collapse" data-parent="#accordionExample">
 								<div class="card-body">
-									<div class="input-group mb-3">
-										<select class="form-control" id="sel" v-model="sel_api">
+									<p class="h5">第一类仓库(ping success)</p>
+									<div class="input-group mb-3" id="sel">
+										<select class="form-control"  v-model="sel_api" >
 											<option  v-for="(v,index) in json" :key="v">{{v.name}}</option>
 										</select>
 										<input class="form-control" type="text" placeholder="请在此输入视屏链接" v-model="input_html" />
 										<div class="input-group-append">
-											<button class="btn btn-light input-group-text" id="basic-addon2" @click="open_blank()" >Wacthing</button>
+											<button class="btn btn-light input-group-text" id="basic-addon2" @click="open_blank" >Wacthing</button>
 										</div>
 									</div>
-
+									<p class="h5">第二类仓库(偶尔丢包)</p>
+									<div class="input-group mb-3" id="sel_two">
+										<select class="form-control"  v-model="sel_api_online">
+											<option  v-for="(v,index) in json_online" :key="v">{{v.name}}</option>
+										</select>
+										<input class="form-control" type="text" placeholder="请在此输入视屏链接" v-model="input_online_html" />
+										<div class="input-group-append">
+											<button class="btn btn-outline-success input-group-text" id="basic-addon2" @click="open_blank_unkonwn" >Wacthing</button>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -100,13 +110,28 @@
 							<div class="card-header bg-dark" id="headingThree">
 								<h5 class="mb-0">
 									<a class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
-										点我选择接口仓库
+										点我选择接口解析类型
 									</a>
 								</h5>
 							</div>
 							<div id="collapseThree" class="collapse" data-parent="#accordionExample">
 								<div class="card-body">
-									接口仓库
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input"  type="radio" name="inlineRadioOptions" id="inlineRadio1" checked="true" value="option1">
+									  <label class="form-check-label" for="inlineRadio1">原生</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+									  <label class="form-check-label" for="inlineRadio2">硬解</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+									  <label class="form-check-label" for="inlineRadio2">软解</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+									  <label class="form-check-label" for="inlineRadio2">不可回收垃圾(等待净化)</label>
+									</div>
 								</div>
 							</div>
 						</div>
