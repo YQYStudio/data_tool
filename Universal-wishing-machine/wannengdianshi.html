@@ -8,6 +8,7 @@
 		<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css" />
 		<link href="css/layui.css" rel="stylesheet" type="text/css" />
 		<link href="css/watch.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="assets/waifu.css"/>
 		<script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
 		<script src="js/bootstrap-4.4.1.js" type="text/javascript"></script>
 	</head>
@@ -50,13 +51,13 @@
 
 		<div class="container" >
 			<div class="row">
-				<div class="col-md-12 box p-3 watchA" >
+				<div class="col-md-12 box p-3 " >
 					<div class="accordion" id="accordionExample">
 						<!-- 看 -->
 						<div class="card">
-							<div class="card-header bg-dark" id="headingOne">
+							<div class="card-header " id="headingOne">
 								<h5 class="mb-0">
-									<a class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+									<a href="javascript:void()" class="p-3" type="button" data-toggle="collapse" data-target="#collapseOne">
 										点我查看使用说明
 									</a>
 								</h5>
@@ -67,21 +68,49 @@
 									<p class="h5">①别问,问得越多,消失越快,选择接口,单击Watching,看电视.</p>
 									<p class="h5">②接口类型会自动选择,除非非常特殊情况,否则不用手选,不然可能会出现解析不出来的情况</p>
 									<p class="h5">③我自己写的后台接口会注明参数带YQYStudio,别人的接口有可能是由广告的<p class="text-monospace text-danger h3 font-weight-bold">接口中出现的广告,切记,千万不能相信,不要点,不要带有好奇心.不然造成的一切损失由个人承担!!!</p></p>
+									<p class="h5">④有的接口因为是小厂商服务器所以解析速度很慢,但是稳定,如果等不及,可以选课其他解析速度快的.</p>
+								</div>
+							</div>
+						</div>
+						<!-- 更新日志 -->
+						<div class="card">
+							<div class="card-header " id="headingOne">
+								<h5 class="mb-0">
+									<a href="javascript:void()" class="p-3" type="button" data-toggle="collapse" data-target="#collapseUpdate">
+										更新日志
+									</a>
+								</h5>
+							</div>
+						
+							<div id="collapseUpdate" class="collapse" data-parent="#accordionExample">
+								<div class="card-body">
+									<span class="text-danger font-weight-bold h3">pushtime</span>:<br />
+									<p class="h5">2020-12-23 16:16:43</p>
+									<span class="text-danger font-weight-bold h3">version</span>:<br />
+									<p class="h5">1.0.1</p>
+									<span class="text-danger font-weight-bold h3">update content</span>:<br />
+									<p class="h5">
+										①:删除了失效的接口,留下的都是可以解析的接口<br />
+										②:基本上爬取了能遍历到的接口,经过查重分析最多留下备用,其他都可以用<br />
+										③:添加了可以在PC端查看使用的桌宠<br />
+										④:添加三号和四号杂物接口仓库<br />
+										④:添加五号专攻接口仓库:专治不服<br />
+									</p>
 								</div>
 							</div>
 						</div>
 						<!-- 用 -->
 						<div class="card" id="watching">
-							<div class="card-header bg-dark" id="headingTwo" >
+							<div class="card-header " id="headingTwo" >
 								<h5 class="mb-0">
-									<a class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+									<a href="javascript:void()" class="p-3" type="button" data-toggle="collapse" data-target="#collapseTwo">
 										点我使用
 									</a>
 								</h5>
 							</div>
 							<div id="collapseTwo" class="collapse" data-parent="#accordionExample">
 								<div class="card-body">
-									<p class="h5">第一类仓库(ping success)</p>
+									<p class="h5">第一类仓库(不会用其他无脑用这个)</p>
 									<div class="input-group mb-3" id="sel">
 										<select class="form-control"  v-model="sel_api" >
 											<option  v-for="(v,index) in json" :key="v">{{v.name}}</option>
@@ -91,7 +120,7 @@
 											<button class="btn btn-light input-group-text" id="basic-addon2" @click="open_blank" >Wacthing</button>
 										</div>
 									</div>
-									<p class="h5">第二类仓库(偶尔丢包)</p>
+									<p class="h5">第二类仓库(偶尔丢包,有高清,有稳定慢解)</p>
 									<div class="input-group mb-3" id="sel_two">
 										<select class="form-control"  v-model="sel_api_online">
 											<option  v-for="(v,index) in json_online" :key="v">{{v.name}}</option>
@@ -101,15 +130,48 @@
 											<button class="btn btn-outline-success input-group-text" id="basic-addon2" @click="open_blank_unkonwn" >Wacthing</button>
 										</div>
 									</div>
+									
+									<p class="h5">第三类仓库(多站解,有4k)</p>
+									<div class="input-group mb-3" id="sel_three">
+										<select class="form-control"  v-model="sel_api_all">
+											<option  v-for="(v,index) in all_json" :key="v">{{v.name}}</option>
+										</select>
+										<input class="form-control" type="text" placeholder="请在此输入视屏链接" v-model="input_all_html" />
+										<div class="input-group-append">
+											<button class="btn btn-outline-success input-group-text" id="basic-addon3" @click="open_All" >watching</button>
+										</div>
+									</div>
+									
+									<p class="h5">第四类仓库(综合多解,有4k)</p>
+									<div class="input-group mb-3" id="sel_four">
+										<select class="form-control"  v-model="sel_api_alltwo">
+											<option  v-for="(v,index) in all_json_two" :key="v">{{v.name}}</option>
+										</select>
+										<input class="form-control" type="text" placeholder="请在此输入视屏链接" v-model="input_alltwo_html" />
+										<div class="input-group-append">
+											<button class="btn btn-outline-success input-group-text" id="basic-addon3" @click="open_All_Two" >watching</button>
+										</div>
+									</div>
+									
+									<p class="h5">第五类仓库(专治不服)</p>
+									<div class="input-group mb-3" id="sel_five">
+										<select class="form-control"  v-model="sel_magnet_other">
+											<option  v-for="(v,index) in magnet_json" :key="v">{{v.name}}</option>
+										</select>
+										<input class="form-control" type="text" placeholder="请在此输入视屏链接" v-model="magnet_other" />
+										<div class="input-group-append">
+											<button class="btn btn-outline-success input-group-text" id="basic-addon3" @click="open_All_Two" >watching</button>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 
 						<!-- 仓库 -->
 						<div class="card">
-							<div class="card-header bg-dark" id="headingThree">
+							<div class="card-header " id="headingThree">
 								<h5 class="mb-0">
-									<a class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+									<a href="javascript:void()" class="p-3" type="button" data-toggle="collapse" data-target="#collapseThree">
 										点我选择接口解析类型
 									</a>
 								</h5>
@@ -135,11 +197,53 @@
 								</div>
 							</div>
 						</div>
+						
+						<!-- 反馈不可用 -->
+						<div class="card">
+							<div class="card-header " id="headingOne">
+								<h5 class="mb-0">
+									<a href="javascript:void()" class="p-3" type="button" data-toggle="collapse" data-target="#collapseReturn">
+										反馈
+									</a>
+								</h5>
+							</div>
+						
+							<div id="collapseReturn" class="collapse" data-parent="#accordionExample">
+								<div class="card-body">
+									<span class="text-danger font-weight-bold h3">Q</span>:<br />
+									<p class="h5">34756019</p>
+									<span class="text-danger font-weight-bold h3">Wechat</span>:<br />
+									<p class="h5">YQYStudio</p>
+									<span class="text-danger font-weight-bold h3">Email</span>:<br />
+									<p class="h5">34756019@qq.com</p>
+									<span class="text-danger font-weight-bold h3">重点建议和已解决</span>:<br />
+									<p class="h5">
+										2020-12-22:增加4k接口(✔)
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="waifu">
+		    <div class="waifu-tips"></div>
+		    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+		    <div class="waifu-tool">
+		        <span class="fui-home"></span>
+		        <span class="fui-chat"></span>
+		        <span class="fui-eye"></span>
+		        <span class="fui-user"></span>
+		        <span class="fui-photo"></span>
+		        <span class="fui-info-circle"></span>
+		        <span class="fui-cross"></span>
+		    </div>
+		</div>
 		
+		<script src="assets/waifu-tips.js"></script>
+		<script src="assets/live2d.js"></script>
+		<script type="text/javascript">initModel("assets/")</script>
 		<script src="js/vue.global.js"></script>
 		<script src="js/wannengdianshiapi/watchingApi.js" type="text/javascript"></script>
 	</body>
