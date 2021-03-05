@@ -65,6 +65,9 @@
 
 							<div id="collapseOne" class="collapse" data-parent="#accordionExample">
 								<div class="card-body">
+									<p class="h5">
+										<p class="text-monospace text-danger h3 font-weight-bold">备注有广告的必须搭配去广告的过滤软件或者插件,不然不要在android上用</p>
+									</p>
 									<p class="h5">①别问,问得越多,消失越快,选择接口,单击Watching,看电视.</p>
 									<p class="h5">②接口类型会自动选择,除非非常特殊情况,否则不用手选,不然可能会出现解析不出来的情况</p>
 									<p class="h5">③我自己写的后台接口会注明参数带YQYStudio,别人的接口有可能是由广告的<p class="text-monospace text-danger h3 font-weight-bold">接口中出现的广告,切记,千万不能相信,不要点,不要带有好奇心.不然造成的一切损失由个人承担!!!</p></p>
@@ -138,7 +141,7 @@
 										</select>
 										<input class="form-control" type="text" placeholder="请在此输入视屏链接" v-model="input_online_html" />
 										<div class="input-group-append">
-											<button class="btn btn-outline-success input-group-text" id="basic-addon2" @click="open_blank_unkonwn" >Wacthing</button>
+											<button class="btn btn-outline-success input-group-text" disabled="disabled" id="basic-addon2" @click="open_blank_unkonwn" >Wacthing</button>
 										</div>
 									</div>
 									
@@ -149,7 +152,7 @@
 										</select>
 										<input class="form-control" type="text" placeholder="请在此输入视屏链接" v-model="input_all_html" />
 										<div class="input-group-append">
-											<button class="btn btn-outline-success input-group-text" id="basic-addon3" @click="open_All" >watching</button>
+											<button class="btn btn-outline-success input-group-text" disabled="disabled" id="basic-addon3" @click="open_All" >watching</button>
 										</div>
 									</div>
 									
@@ -171,7 +174,7 @@
 										</select>
 										<input class="form-control" type="text" placeholder="请在此输入视屏链接" v-model="magnet_other" />
 										<div class="input-group-append">
-											<button class="btn btn-outline-success input-group-text" id="basic-addon3" @click="open_magnet" >watching</button>
+											<button class="btn btn-outline-success input-group-text" disabled="disabled"  id="basic-addon3" @click="open_magnet" >watching</button>
 										</div>
 									</div>
 								</div>

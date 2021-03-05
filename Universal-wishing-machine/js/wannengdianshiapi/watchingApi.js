@@ -12,327 +12,78 @@ const CountApp = {
 			sel_api_alltwo: 'HK',
 			sel_magnet_other:"磁解析(360会报错)",
 			json: [{
-					name: 'public-api-other-one',
+					name: '速度最快,但是巨多广告',
 					api: "https://api.sigujx.com/?url="
 				},
 				{
-					name: 'public-api-other-two',
-					api: "http://api.ijx.xyz/?url="
-				},
-				{
-					name: 'public-api-other-five',
-					api: "https://api.hdworking.top/?url="
-				},
-				{
-					name: 'public-api-other-seven',
-					api: "https://vip.52jiexi.top/?url="
-				},
-				{
-					name: 'PHP-api-one',
-					api: "https://api.sigujx.com/?url="
-				},
-				{
-					name: 'PHP-api-three',
+					name: 'PHP-api-three(安卓可用,但有广告)',
 					api: "https://jx.618g.com/?url="
 				},
 				{
-					name: 'PHP-api-five',
+					name: 'PHP-api-five(解析差,有广告)',
 					api: "https://www.xymav.com/?url="
 				},
 				{
-					name: 'PHP-api-six',
+					name: 'PHP-api-six(安卓可用,但有广告)',
 					api: "https://www.nxflv.com/?url="
 				},
 				{
-					name: '综合+1',
-					api: "http://jx.598110.com/index.php?url="
+					name: '测试接口(有广告)',
+					api: "https://www.1717yun.com/jiexi/?url="
 				},
 				{
-					name: '综合+2',
-					api: "http://www.1717yun.com/jx/ty.php?url="
+					name: '测试接口2(有广告)',
+					api: "https://jx.ivito.cn/?url="
 				},
 				{
-					name: '综合+3',
-					api: "http://py.ha12.xyz/sos/index.php?url="
-				},
-				{
-					name: '综合+4',
-					api: "http://jx.618ge.com/?url="
-				},
-				{
-					name: '综合+5',
-					api: "ttp://jx.598110.com/?url="
-				},
-				{
-					name: 'CDN加速',
-					api: "https://cdn.yangju.vip/k/?url="
-				},
-				{
-					name: '大亨备用',
-					api: "http://jx.cesms.cn/?url="
-				},
-				{
-					name: '优质接口',
-					api: "https://z1.m1907.cn/?jx="
-				},
-				{
-					name: '智能接口',
-					api: "http://demo.baores.com/?url"
-				},
-				{
-					name: '智能接口+2',
-					api: "https://jx.70808.net/?url="
-				},
-				{
-					name: '黑云接口',
-					api: "https://jiexi.380k.com/?url="
+					name: '测试接口3(有广告)',
+					api: "http://z1.m1907.cn/?jx="
 				},
 			],
 			
-			json_online: [{
-					name: 'UnKnown-api-warning-four-tengxun',
-					api: "http://www.82190555.com/index/qqvod.php?url="
-				},
+			json_online: [
 				{
-					name: 'UnKnown-api-warning-five',
-					api: "http://vip.jlsprh.com/index.php?url="
-				},
-				{
-					name: 'UnKnown-api-warning-eight',
-					api: "http://www.sfsft.com/admin.php?url="
-				},
-				{
-					name: 'UnKnown-api-warning-nine',
-					api: "https://jx.618g.com/?url="
-				},
-				{
-					name: 'UnKnown-api-warning-other-ad-two',
-					api: "http://api.bbbbbb.me/vip/?url="
-				},
-				
-				{
-					name: '思古+2',
-					api: "http://jx.1ff1.cn/?url="
-				},
-				{
-					name: '万用+1',
-					api: "http://vip.116kan.com/?url="
-				},
-				{
-					name: '多线路+1',
-					api: "http://jx.hongyishuzhai.com/index.php?url="
-				},
-				{
-					name: '万用+2',
-					api: "http://55jx.top/?url="
-				},
-				{
-					name: '万用+3',
-					api: "https://jx.000180.top/jx/?url="
-				},
-				{
-					name: '万用+4',
-					api: "http://19g.top/?url="
-				},
-				{
-					name: '万用+5',
-					api: "http://vip.jlsprh.com/v/4.php?url="
-				},
-				{
-					name: '万用+6',
-					api: "http://api.bingdou.net/?url="
-				},
-				{
-					name: '思古再备用',
-					api: "https://api.bbbbbb.me/jx/?url="
-				},
-				
+					name: '不开放',
+					api: "none"
+				}			
 			],
 			
-			all_json: [{
-					name: '可以优酷/爱奇艺原画接口1',
-					api: 'https://jiexi.380k.com/?url='
-				},
+			all_json: [
 				{
-					name: '万用+2',
-					api: 'https://jx.618ge.com/?url='
+					name: '不开放',
+					api: 'none'
 				},
-				{
-					name: '万用+3',
-					api: 'https://jx.du2.cc/?url='
-				},
-				{
-					name: '高速接口',
-					api: 'http://jx.daheiyun.com/?url='
-				},
-				{
-					name: '可看芒果',
-					api: 'https://vip.jlsprh.com/?url='
-				},
-				{
-					name: '仿造b站播放器',
-					api: 'http://www.cuan.la/?url='
-				},
-				{
-					name: 'M3U8播放器',
-					api: 'http://jx.rdhk.net/?v='
-				},
-				{
-					name: '高清蓝光',
-					api: 'http://py.ha12.xyz/sos/index.php?url='
-				},
-				{
-					name: '高清蓝光+2',
-					api: 'http://gege.ha123.club/gege1234/index.php?url='
-				},
-				{
-					name: '无名',
-					api: 'http://www.85105052.com/admin.php?url='
-				},
-				{
-					name: '无名备用',
-					api: 'http://www.82190555.com/video.php?url='
-				},
-				{
-					name: '可用+1',
-					api: 'https://jqaaa.com/jx.php?url='
-				},
-				{
-					name: '可用+2',
-					api: 'http://17kyun.com/api.php?url='
-				},
-				{
-					name: 'ok解析',
-					api: 'http://okjx.cc/?url='
-				},
-				{
-					name: '思古可用+',
-					api: 'http://api.bbbbbb.me/jx/?url='
-				},
-
 			],
 			all_json_two:[
 				{
-					name:"HK",
-					api:"http://jx.rdhk.net/?v="
-				},
-				{
-					name:"知网",
-					api:"http://www.xyyh.xyz/zwjx/?url="
-				},
-				{
-					name:"speed",
-					api:"https://www.kpezp.cn/jlexi.php?url="
-				},
-				{
-					name:"维多",
-					api:"https://jx.ivito.cn/?url="
-				},
-				{
-					name:"17云",
-					api:"https://www.1717yun.com/jx/ty.php?url="
-				},
-				{
-					name:"w解析",
-					api:"https://api.tv920.com/vip/?url="
-				},
-				{
-					name:"线路4",
-					api:"https://jx.618g.com/?url="
-				},
-				{
-					name:"线路2",
-					api:"https://z1.m1907.cn/?jx="
-				},
-				{
-					name:"线路1",
+					name:"思古接口1(有巨多广告)",
 					api:"https://api.sigujx.com/?url="
 				},
 				{
-					name:"其他解析",
-					api:"http://nitian9.com/?url="
-				},
-				{
-					name:"豪华",
-					api:"http://api.lhh.la/vip/?url="
-				},
-				{
-					name:"思古接口1",
-					api:"https://api.sigujx.com/?url="
-				},
-				{
-					name:"韩婧接口",
-					api:"https://beaacc.com/api.php?url="
-				},
-				{
-					name:"西瓜接口",
-					api:"https://api.xiguaimg.com/odflv105/index.php?url=",					
-				},
-				{
-					name:"无广告高清接口",
-					api:"http://www.917k.la/?url="
-				},
-				{
-					name:"114解析",
+					name:"114解析(安卓端可用,无广告)",
 					api:"https://jx.f41.cc/?url="
 				},
 				{
-					name:"解析接口2",
+					name:"解析接口2(有巨量广告)",
 					api:"https://www.ckmov.vip/api.php?url="
 				},
 				{
-					name:"超清接口2",
+					name:"超清接口2(有广告)",
 					api:"http://k8aa.com/jx/index.php?url="
 				},
 				{
-					name:"bl接口2",
+					name:"bl接口2(有广告,要过滤)",
 					api:"https://vip.bljiex.com/?v="
 				},
 				{
-					name:"chance_one",
-					api:"http://jx.618ge.com/?url="
-				},
-				{
-					name:"凉城",
-					api:"http://jx.mw0.cc/?url="
-				},
-				{
-					name:"云播放",
-					api:"http://www.33tn.cn/?url="
-				},
-				{
-					name:"大亨接口",
+					name:"大亨接口(有广告)",
 					api:"http://jx.cesms.cn/?url="
 				},
 			],
 			magnet_json:[
 				{
-					name:"磁解析(360会报错)",
-					api:"https://apiv.ga/magnet/"
-				},
-				{
-					name:"全网",
-					api:"http://www.wmxz.wang/video.php?url="
-				},
-				{
-					name:"腾讯专用",
-					api:"http://jx.598110.com/index.php?url="
-				},
-				{
-					name:"优酷专用",
-					api:"http://api.baiyug.cn/vip/index.php?url="
-				},
-				{
-					name:"全网可用重点爱奇艺",
-					api:"https://api.flvsp.com/?skin=47ks&amp;url="
-				},
-				{
-					name:"腾讯爱奇艺优酷专用",
-					api:"http://jx.vgoodapi.com/jx.php?url="
-				},
-				{
-					name:"腾讯爱奇艺专用",
-					api:"https://api.47ks.com/webcloud/?v="
+					name:"本接口暂不开放",
+					api:"none"
 				},
 			]
 		}
