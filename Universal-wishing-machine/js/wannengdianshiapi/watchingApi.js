@@ -5,12 +5,12 @@ const CountApp = {
 			input_online_html: "https://www.iqiyi.com/v_ko3o3jgims.html",
 			input_all_html: "https://www.iqiyi.com/v_ko3o3jgims.html",
 			input_alltwo_html: "https://www.iqiyi.com/v_ko3o3jgims.html",
-			magnet_other:"https://www.iqiyi.com/v_ko3o3jgims.html",
+			magnet_other: "https://www.iqiyi.com/v_ko3o3jgims.html",
 			sel_api: 'public-api-other-one',
-			sel_api_online: 'UnKnown-api-warning-four-tengxun',
+			sel_api_online: '可用接口1',
 			sel_api_all: '可以优酷/爱奇艺原画接口1',
 			sel_api_alltwo: 'HK',
-			sel_magnet_other:"磁解析(360会报错)",
+			sel_magnet_other: "磁解析(360会报错)",
 			json: [{
 					name: '速度最快,但是巨多广告',
 					api: "https://api.sigujx.com/?url="
@@ -40,52 +40,57 @@ const CountApp = {
 					api: "http://z1.m1907.cn/?jx="
 				},
 			],
-			
-			json_online: [
+
+			json_online: [{
+					name: '可用接口1',
+					api: "https://v.znb.me/?url="
+				},
 				{
-					name: '不开放',
-					api: "none"
-				}			
+					name: '可用接口2',
+					api: "https://www.murl.us/?url="
+				},
+				{
+					name: '可用接口3',
+					api: "https://v.kcvod.com/?url="
+				}, {
+					name: '可用接口4',
+					api: "http://s.kvod.us/?url="
+				}
 			],
-			
-			all_json: [
+
+			all_json: [{
+				name: '不开放',
+				api: 'none'
+			}, ],
+			all_json_two: [{
+					name: "思古接口1(有巨多广告)",
+					api: "https://api.sigujx.com/?url="
+				},
 				{
-					name: '不开放',
-					api: 'none'
+					name: "114解析(安卓端可用,无广告)",
+					api: "https://jx.f41.cc/?url="
+				},
+				{
+					name: "解析接口2(有巨量广告)",
+					api: "https://www.ckmov.vip/api.php?url="
+				},
+				{
+					name: "超清接口2(有广告)",
+					api: "http://k8aa.com/jx/index.php?url="
+				},
+				{
+					name: "bl接口2(有广告,要过滤)",
+					api: "https://vip.bljiex.com/?v="
+				},
+				{
+					name: "大亨接口(有广告)",
+					api: "http://jx.cesms.cn/?url="
 				},
 			],
-			all_json_two:[
-				{
-					name:"思古接口1(有巨多广告)",
-					api:"https://api.sigujx.com/?url="
-				},
-				{
-					name:"114解析(安卓端可用,无广告)",
-					api:"https://jx.f41.cc/?url="
-				},
-				{
-					name:"解析接口2(有巨量广告)",
-					api:"https://www.ckmov.vip/api.php?url="
-				},
-				{
-					name:"超清接口2(有广告)",
-					api:"http://k8aa.com/jx/index.php?url="
-				},
-				{
-					name:"bl接口2(有广告,要过滤)",
-					api:"https://vip.bljiex.com/?v="
-				},
-				{
-					name:"大亨接口(有广告)",
-					api:"http://jx.cesms.cn/?url="
-				},
-			],
-			magnet_json:[
-				{
-					name:"本接口暂不开放",
-					api:"none"
-				},
-			]
+			magnet_json: [{
+				name: "本接口暂不开放",
+				api: "none"
+			}, ]
 		}
 	},
 	mounted() {
@@ -120,23 +125,23 @@ const CountApp = {
 			};
 			open(this.all_json[all_index].api + this.input_all_html, "_blank");
 		},
-		open_All_Two(){
+		open_All_Two() {
 			let all_index_two = 0;
-			for(var i = 0;i<this.all_json_two.length;i++){
-				if(this.sel_api_alltwo == this.all_json_two[i].name){
+			for (var i = 0; i < this.all_json_two.length; i++) {
+				if (this.sel_api_alltwo == this.all_json_two[i].name) {
 					all_index_two = i;
 				}
 			}
-			open(this.all_json_two[all_index_two].api + this.input_alltwo_html,"_blank");
+			open(this.all_json_two[all_index_two].api + this.input_alltwo_html, "_blank");
 		},
-		open_magnet(){
+		open_magnet() {
 			let magnet_index = 0;
-			for(var i = 0;i < this.magnet_json.length;i++){
-				if(this.sel_magnet_other == this.magnet_json[i].name){
+			for (var i = 0; i < this.magnet_json.length; i++) {
+				if (this.sel_magnet_other == this.magnet_json[i].name) {
 					magnet_index = i;
 				}
 			}
-			open(this.magnet_json[magnet_index].api+this.magnet_other,"_blank");
+			open(this.magnet_json[magnet_index].api + this.magnet_other, "_blank");
 		}
 	}
 }

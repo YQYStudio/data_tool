@@ -134,14 +134,14 @@
 											<button class="btn btn-light input-group-text" id="basic-addon2" @click="open_blank" >Wacthing</button>
 										</div>
 									</div>
-									<p class="h5">第二类仓库(偶尔丢包,有高清,有稳定慢解)</p>
+									<p class="h5">第二类仓库(用这个)</p>
 									<div class="input-group mb-3" id="sel_two">
 										<select class="form-control"  v-model="sel_api_online">
 											<option  v-for="(v,index) in json_online" :key="v">{{v.name}}</option>
 										</select>
 										<input class="form-control" type="text" placeholder="请在此输入视屏链接" v-model="input_online_html" />
 										<div class="input-group-append">
-											<button class="btn btn-outline-success input-group-text" disabled="disabled" id="basic-addon2" @click="open_blank_unkonwn" >Wacthing</button>
+											<button class="btn btn-outline-success input-group-text"  id="basic-addon2" @click="open_blank_unkonwn" >Wacthing</button>
 										</div>
 									</div>
 									
