@@ -6,16 +6,12 @@ const CountApp = {
 			input_all_html: "https://www.iqiyi.com/v_ko3o3jgims.html",
 			input_alltwo_html: "https://www.iqiyi.com/v_ko3o3jgims.html",
 			magnet_other: "https://www.iqiyi.com/v_ko3o3jgims.html",
-			sel_api: 'public-api-other-one',
+			sel_api: 'PHP-api-three(安卓可用,但有广告)',
 			sel_api_online: '可用接口1',
 			sel_api_all: '可以优酷/爱奇艺原画接口1',
-			sel_api_alltwo: 'HK',
-			sel_magnet_other: "磁解析(360会报错)",
+			sel_api_alltwo: '第二接口',
+			sel_magnet_other: "接口1",
 			json: [{
-					name: '速度最快,但是巨多广告',
-					api: "https://api.sigujx.com/?url="
-				},
-				{
 					name: 'PHP-api-three(安卓可用,但有广告)',
 					api: "https://jx.618g.com/?url="
 				},
@@ -63,34 +59,145 @@ const CountApp = {
 				api: 'none'
 			}, ],
 			all_json_two: [{
-					name: "思古接口1(有巨多广告)",
-					api: "https://api.sigujx.com/?url="
+					name: "第二接口",
+					api: "https://jx.ivito.cn/?url="
 				},
 				{
-					name: "114解析(安卓端可用,无广告)",
-					api: "https://jx.f41.cc/?url="
+					name: "第四接口",
+					api: "https://2.08bk.com/?url="
 				},
 				{
-					name: "解析接口2(有巨量广告)",
-					api: "https://www.ckmov.vip/api.php?url="
+					name: "第六接口",
+					api: "https://api.08bk.com/vip/?url="
 				},
 				{
-					name: "超清接口2(有广告)",
-					api: "http://k8aa.com/jx/index.php?url="
+					name: "第八接口",
+					api: "https://okjx.cc/?url="
 				},
 				{
-					name: "bl接口2(有广告,要过滤)",
-					api: "https://vip.bljiex.com/?v="
+					name: "第九接口",
+					api: "https://17kyun.com/api.php?url="
 				},
 				{
-					name: "大亨接口(有广告)",
-					api: "http://jx.cesms.cn/?url="
+					name: "第十接口",
+					api: "https://www.8090g.cn/jiexi/?url="
+				},
+				{
+					name: "第十一接口",
+					api: "https://www.administratorw.com/admin.php?url="
+				},
+				{
+					name: "第十二接口",
+					api: "https://jsap.attakids.com/?url="
 				},
 			],
 			magnet_json: [{
-				name: "本接口暂不开放",
-				api: "none"
-			}, ]
+					name: "接口1",
+					api: "https://jx.wzslw.cn/?url="
+				},
+				{
+					name: "接口2",
+					api: "http://www.asys.vip/jx/?url="
+				},
+				{
+					name: "接口3",
+					api: "https://9kjx.com/?url="
+				},
+				{
+					name: "接口4",
+					api: "https://okjx.cc/?url="
+				},
+
+				{
+					name: "接口5",
+					api: "https://www.administratorw.com/video.php?url="
+				},
+
+				{
+					name: "接口6",
+					api: "https://www.33tn.cn/?url="
+				},
+
+				{
+					name: "接口7",
+					api: "https://jx.mw0.cc/?url="
+				},
+
+				{
+					name: "接口8",
+					api: "https://api.927jx.com/vip/?url="
+				},
+
+				{
+					name: "接口9",
+					api: "https://jx.ergan.top/?url="
+				},
+
+				{
+					name: "接口10",
+					api: "https://jx.ivito.cn/?url="
+				},
+
+				{
+					name: "接口11",
+					api: "http://33tn.cn/?url="
+				},
+
+				{
+					name: "接口12",
+					api: "https://www.kpezp.cn/jlexi.php?url="
+				},
+
+				{
+					name: "接口13",
+					api: "https://www.h8jx.com/jiexi.php?url="
+				},
+
+				{
+					name: "接口14",
+					api: "https://api.yueliangjx.com/?url="
+				},
+
+				{
+					name: "接口15",
+					api: "https://jiexi8.com/vip/index.php?url="
+				},
+
+				{
+					name: "接口16",
+					api: "https://www.xymav.com/?url="
+				},
+
+				{
+					name: "接口17",
+					api: "https://m2090.com/?url="
+				},
+
+				{
+					name: "接口18",
+					api: "http://api.xdiaosi.com/?url="
+				},
+
+				{
+					name: "接口19",
+					api: "https://jx.4080jx.cc/?url="
+				},
+
+				{
+					name: "接口20",
+					api: "https://jsap.attakids.com/?url="
+				},
+
+				{
+					name: "接口21",
+					api: "https://jx.ap2p.cn/?url="
+				},
+				{
+					name: "接口22",
+					api: "https://jx.ap2p.cn/?url="
+				},
+			],
+
 		}
 	},
 	mounted() {

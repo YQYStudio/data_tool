@@ -1,3 +1,9 @@
+html,body{
+	background: url(../images/wactnback.png)  fixed;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.9;
+}
 .watchA a{
 	text-decoration: none;
 	color: white;
@@ -5,8 +11,22 @@
 .watchA a:hover{
 	color: #c1c1c1;
 }
+.boxCard{
+	background: #000000;
+}
 
-
+.card-header {
+	background: #212529;
+}
+.card a{
+	color: white;
+}
+.navbar-light .navbar-brand {
+    color: rgb(255 255 255 / 90%);
+}
+.navbar-light .navbar-nav .nav-link {
+     color: rgb(255 255 255 / 90%);
+}
 
 
 
