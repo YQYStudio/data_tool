@@ -123,10 +123,6 @@ const CountApp = {
 					api: "https://jx.mw0.cc/?url="
 				},
 
-				{
-					name: "接口8",
-					api: "https://api.927jx.com/vip/?url="
-				},
 
 				{
 					name: "接口9",
